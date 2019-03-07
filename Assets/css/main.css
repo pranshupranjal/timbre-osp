@@ -1,0 +1,406 @@
+    @import url('https://fonts.googleapis.com/css?family=Sarabun:400,700');
+
+    :root {
+        --green: #1DB954;
+        --darkgreen: rgb(18, 117, 53);
+        --blue: #4DAFF6;
+        --white: #fafafa;
+        --radius: 50px;
+    }
+
+    /* Overall */
+    html,body{
+        /* width: 100%;
+        height: 100%; */
+        margin: 0;
+        padding: 0;
+        /* overflow-x:hidden; */
+        font-family: 'Sarabun', sans-serif;
+    }
+
+    button:focus {
+        outline: none;
+    }
+
+    /* Mobile Sidebar */
+    .mob_sidebar
+    {
+        display: none;
+    }
+
+    /* Sidebar */
+
+    .sidebar {
+        width: 11vw;
+        border-right: 1px solid var(--green);
+        padding-right: 2vw;
+        padding-left: 2vw;
+        height: 90vh;
+        margin-top: 2.5%;
+        position: fixed;
+        z-index: 1;
+        background-color: white;
+    }
+
+    #sidelogo {
+        width: 11vw;
+        margin-bottom: 2vh;
+    }
+
+    #sidelogo img{
+        display:block;
+        margin:auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .sidebar button{
+        width: 100%;
+        border-radius: var(--radius);
+        margin-bottom: 10%;
+        padding: 10px 20px;
+    }
+
+    #restbutton button{
+        background: var(--green);
+        border: none;
+        color: var(--white);
+    }
+
+    #restbutton button:hover{
+        background-color: var(--darkgreen);
+    }
+
+    #filter {
+        margin-top:  15vh;
+    }
+
+    #filter button{
+        background: none;
+        color: var(--blue);
+        border: 1px solid var(--blue);
+    }
+
+    #filter button:hover{
+        background: var(--blue);
+        color: var(--white);
+    }
+
+    /* Main area */
+
+    .main_area  {
+        margin-left: 16vw;
+        padding-top: 20vh;
+    }
+
+    .main_area_allsongs {
+        margin-left: 24vw;
+        padding-top: 3vh;
+        width: 73vw;
+    }
+
+    /* main search area, logo, button*/
+
+    .main {
+    width: 40%;
+    margin: 0 auto;
+    }
+
+    /* Logo */
+
+    .logo img {
+        display:block;
+        margin:auto;
+        margin-bottom: 10%;
+    }
+
+    /* Search area */
+
+    .search-container {
+        padding-left: 12px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-radius: var(--radius);
+        background: white;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    }
+
+    #search-input {
+        border: none;
+        width: 90%;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    #search_button {
+        border: none;
+        background: none;
+        outline:none;
+    }
+
+    #search_button:hover {
+        color: var(--green);
+    }
+
+    input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-results-button, input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+    }
+
+    /* Buttons for search on main page */
+
+    .main_buttons {
+        margin: 5% auto;
+        width: 75%;
+        text-align: center;
+        
+    }
+
+    #search_button2 {
+        border-radius: var(--radius);
+        padding: 10px 40px;
+        background-color: var(--green);
+        color: var(--white);
+        margin-right: 2%;
+        outline:none;
+        border: none;
+    }
+
+    #search_button2:hover {
+        background-color: var(--darkgreen);
+    }
+
+    #randomize_button {
+        border-radius: var(--radius);
+        padding: 10px 40px;
+        background: none;
+        border: 1px solid var(--blue);
+        color: var(--blue);    
+        margin-left: 2%;
+        outline:none;
+    }
+
+    #randomize_button:hover {
+        background-color: var(--blue);
+        color: var(--white);
+    }
+
+    /* Hide and display results section */
+
+    #results {
+        display:none;
+    }
+
+    /* Results */
+
+    #noofresults {
+        margin-bottom:2.5vh;
+        margin-left: 2.5vw;
+    }
+
+    #results {
+        margin: 0 auto;
+        width: 80%;
+        margin-top: 10vh;
+    }
+
+    #results h3.r {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-bottom: 5px;
+        margin-top: 2px;
+    }
+
+    #results .lt {
+        color: #00C853;
+    }
+
+    #results .st {
+        line-height: 1.4;
+        word-wrap: break-word;
+    }
+
+    .g{
+        margin-top: 0;
+        margin-bottom: 26px;
+        padding: 12px 20px;
+    }
+
+    .g:hover{
+        box-shadow: 2px 2px 5px #ccc;
+        background: #fdfdfd;
+    }
+
+    /* ScrollBar */
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    ::-webkit-scrollbar:horizontal {
+        height: 6px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        border-radius: var(--radius);
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: var(--green);
+        border-radius: var(--radius);
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--darkgreen); 
+    }
+
+    /* Song Card */
+
+    .card{
+        margin-top: 20px;
+    }
+
+    .songcard {
+        /* max-height: 19vh; */
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        border: 1px solid var(--green);
+        border-radius: 15px;
+        background: white;
+        padding: 20px;
+    }
+
+    .songcard:hover {
+        background: #fafafa;
+        box-shadow: 0 4px 4px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+        /* border: 2px solid var(--green); */
+    }
+
+    .songname{
+        padding-bottom: 4px;
+        font-size: 1.3em;
+        font-weight: 700;
+    }
+
+    .singer{
+        padding-bottom: 4px;
+        font-size: 1.1em;
+        font-style: italic;
+    }
+
+    .language{
+
+    }
+
+    /* Plus button on card */
+
+    .addsymbol {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+    a {
+        text-decoration: none;
+    }
+    a::-moz-focus-inner {
+        border: 0;
+    }
+    .button {
+        position: relative;
+        width: 3rem;
+        height: 3rem;
+        margin: 1rem;
+        border-radius: 50%;
+    }
+    .button > span {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .bg {
+        border-radius: 50%;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+        transition: all 0.2s linear;
+        border: 1px dashed var(--green);
+    }
+
+    .symbol::before, .symbol::after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: block;
+        margin: auto;
+        border-radius: 2px;
+        content: "";
+    }
+    .symbol::before{
+        width: 1.5rem;
+        height: 0.2rem;
+        background-color: var(--green);
+        transition: background-color 1s linear;
+    }
+    .plus .symbol::after {
+        width: 0.2rem;
+        height: 1.5rem;
+        background-color: var(--green);
+    }
+
+
+    .button:hover{
+        box-shadow: 0 4px 4px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    }
+
+    /* All Media Query */
+
+    @media only screen and (max-width: 768px)
+    {
+        /* * { border: 1px solid black; } */
+        
+        .sidebar
+        {
+            display: none;
+        }
+        .mob_sidebar
+        {
+            display: block;
+        }
+        .main
+        {
+            width: 80%;
+        }
+        .main_area{
+            margin-left: 0;
+            padding-top: 10vh;
+            /* background: yellow; */
+            /* width: 100vw; */
+        }
+        #search-input {
+            width: 80%;
+        }
+        #search_button2{
+            margin-top: 3vh;
+        }
+        #randomize_button{
+            margin-top: 10vh;
+        }
+        .songcard{
+            /* height: 14vh; */
+        }
+        #noofresults {
+            width: 100%;
+        }
+    }

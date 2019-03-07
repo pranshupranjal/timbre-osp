@@ -1,0 +1,88 @@
+.mob_sidebar {
+    position: fixed;
+}
+.sidebar_mob-content {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 10vw;
+  width: 50vw;
+  height: 100vh;
+  padding-top: 7vh;
+  display: none;
+  transition: opacity 200ms, z-index 0s 0s;
+  overflow: hidden;
+}
+.sidebar_mob-content.active {
+  z-index: 2;
+  display: block;
+}
+
+svg {
+  overflow: visible;
+}
+
+.sidebar_mob {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 50%;
+  height: auto;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+}
+
+.s-path {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.cloned {
+  position: absolute;
+  z-index: 10;
+  transition: top 0.3s, left 0.3s;
+  transition-delay: 0.2s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.cloned.removed {
+  transition: opacity 0.2s 0;
+  opacity: 0;
+}
+
+.ripple {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  margin-left: -5rem;
+  margin-top: -5rem;
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-animation: animRipple 0.3s;
+          animation: animRipple 0.3s;
+  border-radius: 50%;
+}
+
+@-webkit-keyframes animRipple {
+  to {
+    -webkit-transform: scale(2.5);
+            transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+@keyframes animRipple {
+  to {
+    -webkit-transform: scale(2.5);
+            transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+.author{
+    color: white;
+    position: absolute;
+    bottom: 10vh;
+}
